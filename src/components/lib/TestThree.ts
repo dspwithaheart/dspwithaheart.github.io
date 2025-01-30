@@ -1,26 +1,23 @@
 import * as THREE from 'three'
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js'
+import { setupThreeContainer } from './Init'
 
 export function renderThree() {
-  const container = document.getElementById('three-container')
-  if (!container) return
-  const containerElement: HTMLElement = container as HTMLElement
-  const x = containerElement.offsetWidth  // width
-  const y = containerElement.offsetWidth // height
-
-  const scene: THREE.Scene = new THREE.Scene()
-  const camera: THREE.PerspectiveCamera = new THREE.PerspectiveCamera(
-    75,
-    x / y,
-    0.1,
-    1000,
-  )
-  const renderer = new THREE.WebGLRenderer()
+  const containerElement = document.getElementById('three-container')
+  if (!containerElement) return
+  const {
+    camera,
+    renderer,
+    scene,
+    container,
+  }: {
+    camera: THREE.PerspectiveCamera
+    renderer: THREE.WebGLRenderer
+    scene: THREE.Scene
+    container: HTMLElement
+  } = setupThreeContainer(containerElement)
 
   camera.position.z = 2
-
-  renderer.setSize(x, y)
-
 
   const controls = new OrbitControls(camera, renderer.domElement)
 
@@ -33,8 +30,8 @@ export function renderThree() {
   const cube = new THREE.Mesh(geometry, material)
   scene.add(cube)
 
-  if (containerElement) {
-    containerElement.appendChild(renderer.domElement)
+  if (container) {
+    container.appendChild(renderer.domElement)
   } else {
     confirm('No container found')
     document.body.appendChild(renderer.domElement)
@@ -42,8 +39,8 @@ export function renderThree() {
 
   window.addEventListener('resize', onWindowResize, false)
   function onWindowResize() {
-    const x = containerElement.offsetWidth
-    const y = containerElement.offsetWidth
+    const x = container.offsetWidth
+    const y = container.offsetWidth
     const aspect = x / y
     camera.aspect = aspect
     camera.updateProjectionMatrix()
