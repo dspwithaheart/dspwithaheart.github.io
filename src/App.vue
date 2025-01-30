@@ -16,6 +16,8 @@ import HelloWorld from './components/HelloWorld.vue'
         <RouterLink to="/earth">Earth</RouterLink>
         <RouterLink to="/cube">Cube</RouterLink>
         <RouterLink to="/points">Points</RouterLink>
+        <RouterLink to="/wireframe">WireFrame</RouterLink>
+        <RouterLink to="/morphingsphere">MorphingSphere</RouterLink>
       </nav>
     </div>
   </header>
