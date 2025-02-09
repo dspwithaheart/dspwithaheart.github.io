@@ -18,7 +18,13 @@
     "gh-deploy-init": "git push origin && git subtree push --prefix dist origin gh-pages"
   },
   "dependencies": {
+    "@tailwindcss/vite": "^4.0.5",
+    "@vueuse/core": "^12.5.0",
+    "gasp": "^0.0.2",
+    "gsap": "^3.12.7",
     "pinia": "^2.3.1",
+    "tailwindcss": "^4.0.5",
+    "three": "^0.173.0",
     "vue": "^3.5.13",
     "vue-router": "^4.5.0"
   },
@@ -26,6 +32,7 @@
     "@tsconfig/node22": "^22.0.0",
     "@types/jsdom": "^21.1.7",
     "@types/node": "^22.10.7",
+    "@types/three": "^0.173.0",
     "@vitejs/plugin-vue": "^5.2.1",
     "@vitest/eslint-plugin": "1.1.25",
     "@vue/eslint-config-prettier": "^10.1.0",

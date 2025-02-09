@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import * as THREE from 'three'
 
 import Stats from 'three/addons/libs/stats.module.js'
@@ -155,7 +156,7 @@ function initGui(container: HTMLElement) {
     'dash / gap': 1,
   }
 
-  gui.add(param, 'line type', { LineGeometry: 0, 'gl.LINE': 1 }).onChange(function (val) {
+  gui.add(param, 'line type', { LineGeometry: 0, 'gl.LINE': 1 }).onChange(function (val: any) {
     switch (val) {
       case 0:
         wireframe.visible = true
@@ -173,11 +174,11 @@ function initGui(container: HTMLElement) {
     }
   })
 
-  gui.add(param, 'width (px)', 1, 10).onChange(function (val) {
+  gui.add(param, 'width (px)', 1, 10).onChange(function (val: any) {
     matLine.linewidth = val
   })
 
-  gui.add(param, 'dashed').onChange(function (val) {
+  gui.add(param, 'dashed').onChange(function (val: any) {
     matLine.dashed = val
 
     // dashed is implemented as a defines -- not as a uniform. this could be changed.
@@ -189,12 +190,12 @@ function initGui(container: HTMLElement) {
     ;(wireframe1 as Wireframe).material = val ? matLineDashed : matLineBasic
   })
 
-  gui.add(param, 'dash scale', 0.5, 1, 0.1).onChange(function (val) {
+  gui.add(param, 'dash scale', 0.5, 1, 0.1).onChange(function (val: any) {
     matLine.dashScale = val
     matLineDashed.scale = val
   })
 
-  gui.add(param, 'dash / gap', { '2 : 1': 0, '1 : 1': 1, '1 : 2': 2 }).onChange(function (val) {
+  gui.add(param, 'dash / gap', { '2 : 1': 0, '1 : 1': 1, '1 : 2': 2 }).onChange(function (val: any) {
     switch (val) {
       case 0:
         matLine.dashSize = 2

@@ -44,7 +44,7 @@ const router = createRouter({
       path: '/wireframe',
       name: 'wireframe',
 
-      component: () => import('../components/Wireframe.vue'),
+      component: () => import('../components/WireFrame.vue'),
     },
 
     {

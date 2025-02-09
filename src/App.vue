@@ -1,31 +1,39 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
+import { Navbar } from './components/common';
+import MagneticEffect from './components/common/MagneticEffect.vue'
 </script>
 
-<template>
-  <header>
-    <!-- <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" /> -->
-
-    <div class="wrapper">
-      <HelloWorld msg="I did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-        <RouterLink to="/earth">Earth</RouterLink>
-        <RouterLink to="/cube">Cube</RouterLink>
-        <RouterLink to="/points">Points</RouterLink>
-        <RouterLink to="/wireframe">WireFrame</RouterLink>
-        <RouterLink to="/morphingsphere">MorphingSphere</RouterLink>
-      </nav>
+<template >
+    <div class="relative container w-full h-full mx-auto">
+      <MagneticEffect
+        :magnetoStrengthVal="10"
+        :magnetoTextStrengthVal="20"
+        divId="name-container"
+        textId="name"
+      >
+        <div id="name-container" class="group -m-10 h-fit cursor-pointer p-10">
+          <h1
+            id="name"
+            class="font-fancy flex items-start text-xl font-extrabold uppercase md:text-3xl gradientText"
+          >
+            dspwithaheart
+            <span
+              class="gradientText font-fancy !inline !origin-center text-xl transition-transform duration-500 ease-in-out group-hover:rotate-[360deg]"
+              >&copy;</span
+            >
+          </h1>
+        </div>
+      </MagneticEffect>
+      <Navbar @isLocked="true" />
+      <RouterView />
     </div>
-  </header>
 
-  <RouterView />
 </template>
 
 <style scoped>
+@import "tailwindcss";
 header {
   line-height: 1.5;
   max-height: 100vh;
