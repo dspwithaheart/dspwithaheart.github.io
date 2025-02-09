@@ -3,9 +3,9 @@
     <div v-bind="$attrs" class="fixed right-7 top-7 z-[20]">
       <div
         id="magneto"
-        class="flex items-center size-10 cursor-pointer rounded-full bg-stone-200 brightness-90 ease-in-out lg:size-[4.5rem]"
+        class="flex items-center size-10 cursor-pointer rounded-full bg-stone-200 brightness-90 ease-in-out lg:size-[4.5rem] radialBackground"
       >
-        <h1 class="w-full before:bg-cyan-700 after:bg-stone-700" id="magnetoText"></h1>
+        <h1 class="w-full before:bg-cyan-950 after:bg-black" id="magnetoText"></h1>
       </div>
     </div>
   </MagneticEffect>

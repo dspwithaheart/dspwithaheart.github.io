@@ -44,6 +44,26 @@ a,
   @apply bg-cyan-50;
 }
 
+.gradientBackground {
+  @apply bg-linear-to-r from-zinc-950 from-10% via-black via-30% to-cyan-950 to-100%;
+}
+
+.gradientBackground:hover {
+  @apply bg-linear-to-r from-zinc-950 from-10% via-slate-950 via-30% to-cyan-950 to-100%;
+}
+
 .gradientText {
   @apply bg-clip-text text-transparent bg-gradient-to-r from-cyan-950 to-purple-500 font-semibold;
+}
+
+.gradientText:hover {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-cyan-950 font-semibold;
+}
+
+.radialBackground {
+  @apply bg-gradient-to-r from-[#d1d5db] via-[#6b7280] to-[#374151]
+}
+
+.radialBackground:hover {
+  @apply bg-gradient-to-tr from-[#c12ac3] via-[#0e7490] to-[#3b82f6]
 }

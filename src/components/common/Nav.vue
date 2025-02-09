@@ -9,16 +9,13 @@
     @click="toggleBtnClickAnimation"
     class="fixed inset-0 z-[9998] size-full select-none bg-black opacity-50"
     :class="{ hidden: !isNavbarOpen }"
-  >
-
-  </div>
+  ></div>
 
   <div
     tabindex="0"
     id="navbar"
     @keydown.esc="toggleBtnClickAnimation()"
-    class="fixed right-0 top-0 z-[9998] h-full w-full translate-x-full select-none rounded-s-lg p-5 will-change-auto focus:outline-none max-md:w-[98%] sm:p-10 md:w-2/5 md:px-20 lg:w-2/5
-    bg-gradient-to-r from-stone-950 from-10% via-stone-900 via-30% to-transparent to-90%"
+    class="fixed right-0 top-0 z-[9998] h-full w-full translate-x-full select-none rounded-s-lg p-5 will-change-auto focus:outline-none max-md:w-[98%] sm:p-10 md:w-2/5 md:px-20 lg:w-1/5 bg-gradient-to-r from-zinc-950 from-5% via-black via-30% to-transparent to-90%"
   >
     <Circles id="circles" class="absolute right-0 top-0 opacity-25" />
     <div class="flex h-full flex-col items-center justify-between">
@@ -31,7 +28,12 @@
             :class="['', { active: loginStore.currentTab === tab }]"
           >
             <a
-              @click="(event) => setCurrentTab(tab)"
+              @click="
+                (event) => {
+                  setCurrentTab(tab)
+                  toggleBtnClickAnimation()
+                }
+              "
               class="group my-2 flex h-full w-fit translate-y-full cursor-pointer items-center justify-start leading-none will-change-auto"
             >
               <span
@@ -46,10 +48,7 @@
           </li>
         </ul>
       </div>
-      <MagneticEffect
-        divId="name-container"
-        textId="name"
-      >
+      <MagneticEffect divId="name-container" textId="name">
         <div id="name-container" class="group -m-10 h-fit cursor-pointer p-10">
           <h1
             id="name"
@@ -66,7 +65,6 @@
 
       <div class="w-full">
         <div class="mt-2 h-full font-normal text-stone-50">
-
           <div class="mt-6 flex flex-wrap justify-start gap-1">
             <Button
               class="contact border border-stone-600 opacity-100"
@@ -80,7 +78,6 @@
       </div>
     </div>
   </div>
-
 </template>
 <script setup lang="ts">
 import { onMounted, ref, watch } from 'vue'
@@ -103,12 +100,18 @@ import MorphingSphere from '@/components/MorphingSphere.vue'
 import { useLoginStore } from '@/stores/login'
 import MagneticEffect from '@/components/common/MagneticEffect.vue'
 
+import About from '@/components/sections/About.vue'
+import Carousel from '@/components/Carousel.vue'
+
 const tabs: { [key: string]: any } = {
+  About: About,
+
   Cube: Cube,
   Earth: Earth,
   Points: Points,
   WireFrame: WireFrame,
   MorphingSphere: MorphingSphere,
+  Carousel: Carousel
 }
 
 const loginStore = useLoginStore()

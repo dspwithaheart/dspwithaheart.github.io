@@ -7,8 +7,12 @@ import MorphingSphere from '@/components/MorphingSphere.vue'
 import { ref } from 'vue'
 import { useLoginStore } from '@/stores/login'
 import MagneticEffect from '@/components/common/MagneticEffect.vue'
+import About from '@/components/sections/About.vue'
+import Carousel from '@/components/Carousel.vue'
 
 const tabs: { [key: string]: any } = {
+  About: About,
+  Carousel: Carousel,
   Cube: Cube,
   Earth: Earth,
   Points: Points,
@@ -18,7 +22,6 @@ const tabs: { [key: string]: any } = {
 
 const loginStore = useLoginStore()
 
-
 function setCurrentTab(tab: any) {
   loginStore.currentTab = tab
 }
@@ -26,9 +29,7 @@ function setCurrentTab(tab: any) {
 
 <template>
   <!-- <Nav /> -->
-  <div class="relative container mx-auto gradientBackground">
-
-
+  <div class="relative container mx-auto">
 
     <component :is="tabs[loginStore.currentTab]"></component>
   </div>

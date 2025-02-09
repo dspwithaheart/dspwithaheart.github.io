@@ -11,7 +11,7 @@ onMounted(() => {
 <template>
   <div class="greetings">
     <h3>Three EARTH</h3>
-    <button @click="renderEarth" class="bg-amber-300 hover:bg-amber-700"> animate </button>
+    <!-- <button @click="renderEarth" class="bg-amber-300 hover:bg-amber-700"> animate </button> -->
 
     <div class="w-full" id="three-container-earth"></div>
   </div>

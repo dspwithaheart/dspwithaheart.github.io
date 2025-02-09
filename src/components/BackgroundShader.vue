@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { onMounted } from 'vue';
-import { renderThree } from './lib/Cube';
+import { renderThree } from './lib/BackgroundShader';
 
 onMounted(() => {
   renderThree();
