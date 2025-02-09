@@ -1,1 +1,0 @@
-import{S as a,P as i,W as f}from"./three.module-aqEX2t9A.js";function m(r){const e=r,n=e.offsetWidth,t=e.offsetWidth,o=new a,c=new i(75,n/t,.1,1e3),s=new f;return s.setSize(n,t),{camera:c,renderer:s,scene:o,container:e}}export{m as s};
