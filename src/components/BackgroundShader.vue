@@ -9,9 +9,9 @@ onMounted(() => {
 
 <template>
   <div class="greetings">
-    <h3>Three CUBE</h3>
+    <h3>Glorious CRT Tauraus</h3>
     <!-- <button @click="renderThree" class="bg-amber-300 hover:bg-amber-700"> animate </button> -->
 
-    <div class="w-full" id="three-container"></div>
+    <div class="w-full" id="three-container-background"></div>
   </div>
 </template>

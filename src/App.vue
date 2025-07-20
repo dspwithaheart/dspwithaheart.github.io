@@ -13,6 +13,7 @@ onMounted(() => {
 })
 
 const store = useLoginStore()
+store.currentTab = "Github"
 </script>
 
 <template>
@@ -27,15 +28,21 @@ const store = useLoginStore()
       <div
         id="name-container"
         class="group -m-10 h-fit cursor-pointer p-10"
-        @click="store.currentTab = 'Home'"
+        @click="store.currentTab = 'Github'"
       >
         <h1
           id="name"
           class="font-fancy flex items-start text-xl font-extrabold uppercase md:text-3xl gradientText"
         >
-          dspwithaheart
+          dspwith<span
+            class="gradientText font-fancy  text-3xl animate-pulse
+              "
+            >a</span
+          >
+heart
           <span
-            class="gradientText font-fancy !inline !origin-center text-xl transition-transform duration-500 ease-in-out group-hover:rotate-[360deg]"
+            class="gradientText font-fancy !inline !origin-center text-xl
+            transition-transform duration-500 ease-in-out group-hover:rotate-[360deg]"
             >&copy;</span
           >
         </h1>

@@ -1,7 +1,7 @@
 <template>
   <BurgerMenuBtn
     @click="toggleBtnClickAnimation"
-    class="z-[9999] scale-0 drop-shadow-lg"
+    class="z-[9999] scale-0 drop-shadow-lg animate-bounce hover:animate-none"
     id="burger"
   />
 
@@ -102,12 +102,13 @@ import MagneticEffect from '@/components/common/MagneticEffect.vue'
 
 import About from '@/components/sections/About.vue'
 import Carousel from '@/components/Carousel.vue'
-import Github from '@/components/sections/Github.vue'
+import Github from '@/components/sections/GitHub.vue'
+import Background from 'three/src/renderers/common/Background.js'
 
 const tabs: { [key: string]: any } = {
   Github: Github,
   About: About,
-
+  Tauraus: Background,
   Cube: Cube,
   Earth: Earth,
   Points: Points,
