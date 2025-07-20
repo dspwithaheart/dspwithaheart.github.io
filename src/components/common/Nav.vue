@@ -102,8 +102,10 @@ import MagneticEffect from '@/components/common/MagneticEffect.vue'
 
 import About from '@/components/sections/About.vue'
 import Carousel from '@/components/Carousel.vue'
+import Github from '@/components/sections/Github.vue'
 
 const tabs: { [key: string]: any } = {
+  Github: Github,
   About: About,
 
   Cube: Cube,
@@ -111,7 +113,7 @@ const tabs: { [key: string]: any } = {
   Points: Points,
   WireFrame: WireFrame,
   MorphingSphere: MorphingSphere,
-  Carousel: Carousel
+  Carousel: Carousel,
 }
 
 const loginStore = useLoginStore()

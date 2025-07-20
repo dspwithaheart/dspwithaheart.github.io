@@ -9,8 +9,10 @@ import { useLoginStore } from '@/stores/login'
 import MagneticEffect from '@/components/common/MagneticEffect.vue'
 import About from '@/components/sections/About.vue'
 import Carousel from '@/components/Carousel.vue'
+import Github from '@/components/sections/Github.vue'
 
 const tabs: { [key: string]: any } = {
+  Github: Github,
   About: About,
   Carousel: Carousel,
   Cube: Cube,
@@ -30,11 +32,10 @@ function setCurrentTab(tab: any) {
 <template>
   <!-- <Nav /> -->
   <div class="relative container mx-auto">
-
     <component :is="tabs[loginStore.currentTab]"></component>
   </div>
-</template>
 
+</template>
 
 <style scoped>
 header {

@@ -27,7 +27,6 @@ let gui
 let insetWidth: number
 let insetHeight: number
 
-
 export function init() {
   const containerElement = document.getElementById('three-container-wireframe')
   if (!containerElement) return
@@ -41,13 +40,13 @@ export function init() {
   // renderer.setPixelRatio( window.devicePixelRatio );
   // renderer.setSize( window.innerWidth, window.innerHeight );
   // renderer.setClearColor( 0x000000, 0.0 );
-  renderer.setAnimationLoop( animate );
-  container.appendChild( renderer.domElement );
+  renderer.setAnimationLoop(animate)
+  container.appendChild(renderer.domElement)
 
   // scene = new THREE.Scene();
 
   // camera = new THREE.PerspectiveCamera( 40, window.innerWidth / window.innerHeight, 1, 1000 );
-  camera.position.set( -50, 0, 50 );
+  camera.position.set(-50, 0, 50)
 
   camera2 = new THREE.PerspectiveCamera(40, 1, 1, 1000)
   camera2.position.copy(camera.position)
@@ -146,7 +145,7 @@ function animate() {
 //
 
 function initGui(container: HTMLElement) {
-  gui = new GUI(container= container)
+  gui = new GUI((container = container))
 
   const param = {
     'line type': 0,
@@ -195,7 +194,9 @@ function initGui(container: HTMLElement) {
     matLineDashed.scale = val
   })
 
-  gui.add(param, 'dash / gap', { '2 : 1': 0, '1 : 1': 1, '1 : 2': 2 }).onChange(function (val: any) {
+  gui.add(param, 'dash / gap', { '2 : 1': 0, '1 : 1': 1, '1 : 2': 2 }).onChange(function (
+    val: any,
+  ) {
     switch (val) {
       case 0:
         matLine.dashSize = 2

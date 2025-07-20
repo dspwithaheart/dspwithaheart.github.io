@@ -49,6 +49,6 @@ export const useLoginStore = defineStore('login', () => {
     loggedin,
     sessionTimeoutProgress,
     login,
-    calculateSessionTimeout
+    calculateSessionTimeout,
   }
 })

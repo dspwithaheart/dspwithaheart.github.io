@@ -1,8 +1,8 @@
 // Nav type
 export type navLinkType = {
-  label: string;
-  url: string;
-};
+  label: string
+  url: string
+}
 
 // Nav
 const navLinks = [
@@ -26,14 +26,14 @@ const navLinks = [
     label: 'Contact',
     url: '#contact-section',
   },
-];
+]
 const navbarLinks = [
   {
     label: 'Home',
     url: '#app',
   },
   ...navLinks,
-];
+]
 
 const socialLinks = [
   {
@@ -44,7 +44,7 @@ const socialLinks = [
     label: 'LinkedIn',
     url: 'https://www.linkedin.com/in/aayush-y-4434301aa',
   },
-];
+]
 
 const resourceLinks = [
   {
@@ -59,19 +59,18 @@ const resourceLinks = [
     label: 'Figma Template',
     url: 'https://www.figma.com/community/file/1328038510191576951/project-starter-template',
   },
-];
+]
 
 const heroText =
-  'A freelance full-stack developer, making good shit since 2023, hiding bad shit since 2023.';
+  'A freelance full-stack developer, making good shit since 2023, hiding bad shit since 2023.'
 
-const locationPlace = `15°22'22.0"N 44°10'39.5"E`;
-const locationCountry = 'Yemen, Sanaa';
+const locationPlace = `15°22'22.0"N 44°10'39.5"E`
+const locationCountry = 'Yemen, Sanaa'
 
 // cal.com
-const dataCalNamespace = '30min';
-const dataCalLink = 'brhoom/30min';
-const dataCalConfig =
-  '{"layout":"month_view", "theme": "dark", "brand": "#8C8C73"}';
+const dataCalNamespace = '30min'
+const dataCalLink = 'brhoom/30min'
+const dataCalConfig = '{"layout":"month_view", "theme": "dark", "brand": "#8C8C73"}'
 
 export {
   socialLinks,
@@ -84,4 +83,4 @@ export {
   dataCalNamespace,
   dataCalLink,
   dataCalConfig,
-};
+}

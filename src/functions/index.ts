@@ -5,39 +5,39 @@ const textSplitterIntoChar = (
   isFancyFont: boolean = false,
   isNewLine: boolean = false,
 ): string => {
-  const words = text.split(' ');
-  const char = words.map((word) => word.split(''));
+  const words = text.split(' ')
+  const char = words.map((word) => word.split(''))
 
-  let result = '';
+  let result = ''
   char.forEach((word) => {
-    result += '<span class="!text-nowrap  overflow-clip ';
+    result += '<span class="!text-nowrap  overflow-clip '
     if (isNewLine) {
-      result += ' leading-none block  ';
+      result += ' leading-none block  '
     } else {
-      result += ' inline-block ';
+      result += ' inline-block '
     }
-    result += '">';
+    result += '">'
 
     word.forEach((char) => {
       let classes =
-        'letters translate-y-[120%] inline-block will-change-auto will-change-transform ';
+        'letters translate-y-[120%] inline-block will-change-auto will-change-transform '
       if (isFancyFont) {
-        classes += ' font-fancy ';
+        classes += ' font-fancy '
       }
 
-      result += `<span class="${classes}">${char}</span>`;
-    });
+      result += `<span class="${classes}">${char}</span>`
+    })
 
-    result += '</span> ';
-  });
+    result += '</span> '
+  })
 
-  return result;
-};
+  return result
+}
 
 const getAvailableForWorkDate = () => {
-  const date = new Date();
+  const date = new Date()
 
-  const year = date.getFullYear().toString().slice(-2);
+  const year = date.getFullYear().toString().slice(-2)
   const monthNames = [
     'JAN',
     'FEB',
@@ -51,17 +51,17 @@ const getAvailableForWorkDate = () => {
     'OCT',
     'NOV',
     'DEC',
-  ];
-  let index = date.getMonth();
+  ]
+  let index = date.getMonth()
 
   // Uncomment this if you want to include the next month
   // if (date.getMonth() < 12) {
   //   index += 1;
   // }
-  const month = monthNames[index];
+  const month = monthNames[index]
 
-  return `${month} '${year}`;
-};
+  return `${month} '${year}`
+}
 
 const gotoSection = (url: string) => {
   return
@@ -71,6 +71,6 @@ const gotoSection = (url: string) => {
   //   return;
   // }
   // lenis.scrollTo(url, { duration: 3 });
-};
+}
 
-export { textSplitterIntoChar, getAvailableForWorkDate, gotoSection };
+export { textSplitterIntoChar, getAvailableForWorkDate, gotoSection }

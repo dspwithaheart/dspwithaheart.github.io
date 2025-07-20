@@ -1,11 +1,7 @@
 <template>
-
   <!-- ====== Contact Section End -->
 
   <section id="services" class="padding-x mb-20">
-
-
-
     <div class="flex w-full flex-col">
       <h1 id="what-i-do" v-html="whatIDo" class="heading-1 font-extrabold uppercase"></h1>
 
@@ -13,8 +9,6 @@
         id="services-text"
         class="grid-gap mt-[5%] grid grid-cols-12 justify-end text-flax-smoke-300 opacity-0 lg:grid"
       >
-
-
         <p
           class="heading-4 font-fancy col-span-8 w-full text-balance sm:font-semibold col-span-4 md:col-start-5"
         >
@@ -27,7 +21,7 @@
       </div>
     </div>
 
-    <div class="relative mt-12 w-full lg:mt-[10%] ">
+    <div class="relative mt-12 w-full lg:mt-[10%]">
       <div class="mt-12 flex flex-col justify-between gap-y-16">
         <ServicesCard
           v-for="(card, index) in servicesCardProps"
@@ -57,7 +51,11 @@ const servicesCardProps = [
   {
     title: 'Software/Automation Engineer',
     body: 'Development and support of process automation solutions (data prep, inspection, metrology, lithography, etch) for photomask manufacturing processes in semiconductor production Integration/testing of developed applications on laser or electron beam writers. System architecture/requirements engineering/design reviews for existing process optimization. Fullstack development with CI/CD using Gitlab CI and Docker Swarm. Integration with ETL/data warehouse',
-    headings: ['Typescript, Python and Java', 'Docker, Gitlab CI and Protrainer', 'Oracle PL/SQL, MySLQ, MongoDB and GraphQL'],
+    headings: [
+      'Typescript, Python and Java',
+      'Docker, Gitlab CI and Protrainer',
+      'Oracle PL/SQL, MySLQ, MongoDB and GraphQL',
+    ],
     shape: `<svg viewBox="0 0 200 200"  xmlns="http://www.w3.org/2000/svg">
   <path d="M100 0C103.395 53.7596 146.24 96.6052 200 100C146.24 103.395 103.395 146.24 100 200C96.6052 146.24 53.7596 103.395 0 100C53.7596 96.6052 96.6052 53.7596 100 0Z"/>
   </svg>

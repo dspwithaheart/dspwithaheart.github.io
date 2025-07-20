@@ -16,7 +16,7 @@ const store = useLoginStore()
 </script>
 
 <template>
-  <div class="w-full h-full background" id="three-container-background"></div>
+  <!-- <div class="w-full h-full background" id="three-container-background"></div> -->
   <div class="relative container w-full h-full mx-auto p-9">
     <MagneticEffect
       :magnetoStrengthVal="10"

@@ -1,8 +1,5 @@
 <template>
-  <component
-    :is="tag"
-    class="h-[2ch] w-fit select-none overflow-y-hidden max-md:h-5"
-  >
+  <component :is="tag" class="h-[2ch] w-fit select-none overflow-y-hidden max-md:h-5">
     <a @click="gotoSection(url)" :href="url" class="group">
       <p
         class="font-fancy -translate-y-0 transition-all duration-300 ease-in-out will-change-auto group-hover:translate-y-[-100%]"
@@ -47,24 +44,24 @@
 </template>
 
 <script setup lang="ts">
-  import { gotoSection } from '@/functions';
+import { gotoSection } from '@/functions'
 
-  defineProps({
-    tag: {
-      type: String,
-      default: 'p', // Default tag if not provided
-    },
-    label: {
-      type: String,
-      required: true,
-    },
-    url: {
-      type: String,
-      required: true,
-    },
-    icon: {
-      type: Boolean,
-      default: false,
-    },
-  });
+defineProps({
+  tag: {
+    type: String,
+    default: 'p', // Default tag if not provided
+  },
+  label: {
+    type: String,
+    required: true,
+  },
+  url: {
+    type: String,
+    required: true,
+  },
+  icon: {
+    type: Boolean,
+    default: false,
+  },
+})
 </script>

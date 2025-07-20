@@ -20,10 +20,10 @@ import { RenderPass } from 'three/addons/postprocessing/RenderPass.js'
 import { BloomPass } from 'three/addons/postprocessing/BloomPass.js'
 import { OutputPass } from 'three/addons/postprocessing/OutputPass.js'
 
-import { ShaderPass } from 'three/addons/postprocessing/ShaderPass.js';
+import { ShaderPass } from 'three/addons/postprocessing/ShaderPass.js'
 
-import { RGBShiftShader } from 'three/addons/shaders/RGBShiftShader.js';
-import { DotScreenShader } from 'three/addons/shaders/DotScreenShader.js';
+import { RGBShiftShader } from 'three/addons/shaders/RGBShiftShader.js'
+import { DotScreenShader } from 'three/addons/shaders/DotScreenShader.js'
 
 import { setupThreeContainer } from './Init'
 

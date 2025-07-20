@@ -1,5 +1,5 @@
 /* @import './base.css'; */
-@import "tailwindcss";
+@import 'tailwindcss';
 
 #app {
   @apply font-sans text-base text-gray-700 bg-clip-text  bg-gradient-to-r from-blue-600 to-purple-500;
@@ -31,10 +31,8 @@ a,
     display: grid;
     /* grid-template-columns: 1fr 1fr; */
     padding: 0 2rem;
-    
   }
 }
-
 
 .routerLinkTab {
   @apply border-r-2 basis-1/4 hover:underline text-cyan-500;
@@ -61,9 +59,9 @@ a,
 }
 
 .radialBackground {
-  @apply bg-gradient-to-r from-[#d1d5db] via-[#6b7280] to-[#374151]
+  @apply bg-gradient-to-r from-[#d1d5db] via-[#6b7280] to-[#374151];
 }
 
 .radialBackground:hover {
-  @apply bg-gradient-to-tr from-[#c12ac3] via-[#0e7490] to-[#3b82f6]
+  @apply bg-gradient-to-tr from-[#c12ac3] via-[#0e7490] to-[#3b82f6];
 }

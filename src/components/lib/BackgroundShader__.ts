@@ -60,15 +60,13 @@ export function renderThree() {
 
   }`
 
-  let particles:any,
+  let particles: any,
     count = 0
   // let posDeltaX = 0
   const posDeltaY = -350
   const SEPARATION = 100,
     AMOUNTX = 50,
     AMOUNTY = 50
-
-
 
   init()
 
@@ -120,14 +118,14 @@ export function renderThree() {
     // return new THREE.Points(geometry, material)
 
     particles = new THREE.Points(geometry, material)
-    scene.add( particles );
+    scene.add(particles)
 
     renderer.setClearColor(0x000000, 0)
-    renderer.setPixelRatio( window.devicePixelRatio );
-    renderer.setSize( window.innerWidth, window.innerHeight );
-    renderer.setAnimationLoop( animate );
-    renderer.autoClear = false;
-    container.appendChild( renderer.domElement );
+    renderer.setPixelRatio(window.devicePixelRatio)
+    renderer.setSize(window.innerWidth, window.innerHeight)
+    renderer.setAnimationLoop(animate)
+    renderer.autoClear = false
+    container.appendChild(renderer.domElement)
 
     // //
 

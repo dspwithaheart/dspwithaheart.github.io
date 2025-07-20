@@ -65,12 +65,9 @@ export function init() {
   renderer = containerSetup.renderer
   const container = containerSetup.container
 
-  camera.position.z = 250;
-  renderer.setAnimationLoop( animate );
-  container.appendChild( renderer.domElement );
-
-
-
+  camera.position.z = 250
+  renderer.setAnimationLoop(animate)
+  container.appendChild(renderer.domElement)
 
   //
 

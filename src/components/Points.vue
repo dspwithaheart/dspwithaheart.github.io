@@ -1,11 +1,10 @@
 <script setup lang="ts">
-import { onMounted } from 'vue';
-import { init } from './lib/Points';
+import { onMounted } from 'vue'
+import { init } from './lib/Points'
 
 onMounted(() => {
-  init();
-});
-
+  init()
+})
 </script>
 
 <template>
@@ -15,7 +14,4 @@ onMounted(() => {
 
     <div class="w-full" id="three-container-points"></div>
   </div>
-
 </template>
-
-

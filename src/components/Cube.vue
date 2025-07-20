@@ -1,11 +1,10 @@
 <script setup lang="ts">
-import { onMounted } from 'vue';
-import { renderThree } from './lib/Cube';
+import { onMounted } from 'vue'
+import { renderThree } from './lib/Cube'
 
 onMounted(() => {
-  renderThree();
-});
-
+  renderThree()
+})
 </script>
 
 <template>
@@ -15,5 +14,4 @@ onMounted(() => {
 
     <div class="w-full" id="three-container"></div>
   </div>
-
 </template>

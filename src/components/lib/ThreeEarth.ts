@@ -17,7 +17,12 @@ export function renderEarth() {
   const y = containerElement.offsetWidth // height
 
   const scene: THREE.Scene = new THREE.Scene()
-  const camera: THREE.PerspectiveCamera = new THREE.PerspectiveCamera(7, window.innerWidth / window.innerHeight, 1, 100)
+  const camera: THREE.PerspectiveCamera = new THREE.PerspectiveCamera(
+    7,
+    window.innerWidth / window.innerHeight,
+    1,
+    100,
+  )
 
   const renderer = new THREE.WebGLRenderer()
   const controls = new OrbitControls(camera, renderer.domElement)

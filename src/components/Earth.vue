@@ -1,11 +1,10 @@
 <script setup lang="ts">
-import { onMounted } from 'vue';
-import { renderEarth } from './lib/ThreeEarth';
+import { onMounted } from 'vue'
+import { renderEarth } from './lib/ThreeEarth'
 
 onMounted(() => {
-  renderEarth();
-});
-
+  renderEarth()
+})
 </script>
 
 <template>
@@ -15,7 +14,4 @@ onMounted(() => {
 
     <div class="w-full" id="three-container-earth"></div>
   </div>
-
 </template>
-
-
